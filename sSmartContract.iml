@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: io.horizen:sidechains-sdk:0.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.12.12" level="project" />
+    <orderEntry type="library" name="Maven: io.horizen:zendoo-sc-cryptolib:0.3.0" level="project" />
+    <orderEntry type="library" name="Maven: io.circe:circe-core_2.12:0.9.0" level="project" />
+    <orderEntry type="library" name="Maven: io.circe:circe-numbers_2.12:0.9.0" level="project" />
+    <orderEntry type="library" name="Maven: org.typelevel:cats-core_2.12:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.typelevel:cats-macros_2.12:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.typelevel:cats-kernel_2.12:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.typelevel:machinist_2.12:0.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-reflect:2.12.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scorexfoundation:scorex-core_2.12:2.0.0-RC6" level="project" />
+    <orderEntry type="library" name="Maven: com.iheart:ficus_2.12:1.4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:config:1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.typelevel:macro-compat_2.12:1.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scorexfoundation:scrypto_2.12:2.1.7" level="project" />
+    <orderEntry type="library" name="Maven: org.rudogma:supertagged_2.12:1.4" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.scala-logging:scala-logging_2.12:3.9.2" level="project" />
+    <orderEntry type="library" name="Maven: org.scorexfoundation:scorex-util_2.12:0.1.6" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.12:2.5.24" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-java8-compat_2.12:0.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http-core_2.12:10.1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http_2.12:10.1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-parsing_2.12:10.1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-protobuf_2.12:2.5.24" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-stream_2.12:2.5.24" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:ssl-config-core_2.12:0.3.8" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.12:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.bitlet:weupnp:0.1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-net:commons-net:3.6" level="project" />
+    <orderEntry type="library" name="Maven: io.circe:circe-generic_2.12:0.8.0" level="project" />
+    <orderEntry type="library" name="Maven: com.chuusai:shapeless_2.12:2.3.2" level="project" />
+    <orderEntry type="library" name="Maven: io.circe:circe-parser_2.12:0.8.0" level="project" />
+    <orderEntry type="library" name="Maven: io.circe:circe-jawn_2.12:0.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.spire-math:jawn-parser_2.12:0.10.4" level="project" />
+    <orderEntry type="library" name="Maven: de.heikoseeberger:akka-http-circe_2.12:1.20.0" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.3.0-alpha4" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.3.0-alpha4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.mail:javax.mail:1.6.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scalacheck:scalacheck_2.12:1.13.5" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-sbt:test-interface:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.scorexfoundation:iodb_2.12:0.3.2" level="project" />
+    <orderEntry type="library" name="Maven: net.jpountz.lz4:lz4:1.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-simple:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:4.2.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-assistedinject:4.2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http-jackson_2.12:10.1.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-scala_2.12:2.9.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.9" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-paranamer:2.9.9" level="project" />
+    <orderEntry type="library" name="Maven: com.thoughtworks.paranamer:paranamer:2.8" level="project" />
+    <orderEntry type="library" name="Maven: org.glassfish.tyrus.bundles:tyrus-standalone-client:1.15" level="project" />
+    <orderEntry type="library" name="Maven: org.iq80.leveldb:leveldb:0.12" level="project" />
+    <orderEntry type="library" name="Maven: org.iq80.leveldb:leveldb-api:0.12" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.64" level="project" />
+    <orderEntry type="library" name="Maven: org.ethereum:leveldbjni-all:1.18.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+  </component>
+</module>
