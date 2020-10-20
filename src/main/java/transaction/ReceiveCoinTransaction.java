@@ -1,6 +1,6 @@
 package transaction;
 
-import Info.SendCoinInfo;
+import info.SendCoinInfo;
 import com.google.common.primitives.Bytes;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.Longs;
@@ -10,8 +10,6 @@ import com.horizen.box.data.RegularBoxData;
 import com.horizen.proof.Signature25519;
 import com.horizen.proposition.Proposition;
 import com.horizen.transaction.TransactionSerializer;
-import scorex.core.serialization.BytesSerializable;
-import scorex.core.serialization.ScorexSerializer;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;

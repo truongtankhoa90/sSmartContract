@@ -1,4 +1,4 @@
-package Info;
+package info;
 
 import com.google.common.primitives.Bytes;
 import com.google.common.primitives.Ints;

@@ -1,6 +1,6 @@
 package api;
 
-import Info.SendCoinInfo;
+import info.SendCoinInfo;
 import akka.http.javadsl.server.Route;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.horizen.api.http.ApiResponse;

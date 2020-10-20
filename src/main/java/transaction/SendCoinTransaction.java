@@ -1,6 +1,6 @@
 package transaction;
 
-import Info.SendCoinInfo;
+import info.SendCoinInfo;
 import com.horizen.box.NoncedBox;
 import com.horizen.box.data.RegularBoxData;
 import com.horizen.proof.Signature25519;
