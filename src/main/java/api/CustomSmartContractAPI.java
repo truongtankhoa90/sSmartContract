@@ -56,7 +56,7 @@ public class CustomSmartContractAPI extends ApplicationApiGroup {
     private ApiResponse createSmartContract(SidechainNodeView view, CreateSmartContractRequest ent) {
         try {
             if (ent.message != "ShowMoney") {
-//                throw new IllegalStateException("Nothing to do. Invalid contract!");
+                throw new IllegalStateException("Nothing to do. Invalid contract!");
             }
             // Parse the address (public key) of receiver.
             PublicKey25519Proposition receiverAddress = PublicKey25519PropositionSerializer.getSerializer()
