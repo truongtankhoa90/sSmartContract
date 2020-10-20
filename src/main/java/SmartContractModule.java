@@ -1,3 +1,4 @@
+import api.CustomSmartContractAPI;
 import com.google.inject.AbstractModule;
 import com.google.inject.TypeLiteral;
 import com.google.inject.name.Names;
@@ -8,6 +9,9 @@ import com.horizen.box.BoxSerializer;
 import com.horizen.box.NoncedBox;
 import com.horizen.box.data.NoncedBoxData;
 import com.horizen.box.data.NoncedBoxDataSerializer;
+import com.horizen.companion.SidechainBoxesDataCompanion;
+import com.horizen.companion.SidechainProofsCompanion;
+import com.horizen.companion.SidechainTransactionsCompanion;
 import com.horizen.proof.Proof;
 import com.horizen.proof.ProofSerializer;
 import com.horizen.proposition.Proposition;
@@ -21,6 +25,8 @@ import com.horizen.transaction.BoxTransaction;
 import com.horizen.transaction.TransactionSerializer;
 import com.horizen.utils.Pair;
 import com.horizen.wallet.ApplicationWallet;
+import transaction.ReceiveCoinTransactionSerializer;
+import transaction.SendCoinTransactionIdsEnum;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -60,11 +66,15 @@ public class SmartContractModule extends AbstractModule {
         File historyStore = new File(sidechainSettings.scorexSettings().dataDir().getAbsolutePath() + "/history");
         File consensusStore = new File(sidechainSettings.scorexSettings().dataDir().getAbsolutePath() + "/consensusData");
 
-
+        customTransactionSerializers.put(SendCoinTransactionIdsEnum.ReceiveCoinTransactionId.id(), (TransactionSerializer) ReceiveCoinTransactionSerializer.getSerializer());
+        SidechainBoxesDataCompanion sidechainBoxesDataCompanion = new SidechainBoxesDataCompanion(customBoxDataSerializers);
+        SidechainProofsCompanion sidechainProofsCompanion = new SidechainProofsCompanion(customProofSerializers);
+        SidechainTransactionsCompanion transactionsCompanion = new SidechainTransactionsCompanion(customTransactionSerializers,
+                sidechainBoxesDataCompanion, sidechainProofsCompanion);
 
         // Here I can add my custom rest api and/or override existing one
         List<ApplicationApiGroup> customApiGroups = new ArrayList<>();
-
+        customApiGroups.add(new CustomSmartContractAPI(transactionsCompanion));
 
         List<Pair<String, String>> rejectedApiPaths = new ArrayList<>();
 

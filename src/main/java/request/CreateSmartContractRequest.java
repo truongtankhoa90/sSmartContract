@@ -1,3 +1,5 @@
+package request;
+
 /*
  Customized smart contract request implemented by Khoa.T.Truong
  */
