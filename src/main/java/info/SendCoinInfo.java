@@ -41,12 +41,10 @@ public class SendCoinInfo {
     public static SendCoinInfo parseBytes(byte[] bytes) {
         int offset = 0;
 
-        int batchSize = BytesUtils.getInt(bytes, offset);
-
         long amount = BytesUtils.getLong(bytes, offset);
         offset += 8;
 
-        batchSize = BytesUtils.getInt(bytes, offset);
+        int batchSize = BytesUtils.getInt(bytes, offset);
         offset += 4;
 
         PublicKey25519Proposition receiverAddress = PublicKey25519PropositionSerializer.getSerializer()

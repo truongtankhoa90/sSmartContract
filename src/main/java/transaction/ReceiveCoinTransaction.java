@@ -1,5 +1,6 @@
 package transaction;
 
+import com.horizen.utils.BytesUtils;
 import info.SendCoinInfo;
 import com.google.common.primitives.Bytes;
 import com.google.common.primitives.Ints;
@@ -10,9 +11,11 @@ import com.horizen.box.data.RegularBoxData;
 import com.horizen.proof.Signature25519;
 import com.horizen.proposition.Proposition;
 import com.horizen.transaction.TransactionSerializer;
+import scorex.core.NodeViewModifier$;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -84,5 +87,45 @@ public class ReceiveCoinTransaction extends AbstractRegularTransaction{
                 Ints.toByteArray(sendCoinInfoBytes.length),          // 4 bytes
                 sendCoinInfoBytes                                    // depends on previous value (>=4 bytes)
         );
+    }
+
+    public static ReceiveCoinTransaction parseBytes(byte[] bytes) {
+        int offset = 0;
+
+        long fee = BytesUtils.getLong(bytes, offset);
+        offset += 8;
+
+        long timestamp = BytesUtils.getLong(bytes, offset);
+        offset += 8;
+
+        int batchSize = BytesUtils.getInt(bytes, offset);
+        offset += 4;
+
+        ArrayList<byte[]> inputRegularBoxIds = new ArrayList<>();
+        int idLength = NodeViewModifier$.MODULE$.ModifierIdSize();
+        while(batchSize > 0) {
+            inputRegularBoxIds.add(Arrays.copyOfRange(bytes, offset, offset + idLength));
+            offset += idLength;
+            batchSize -= idLength;
+        }
+
+        batchSize = BytesUtils.getInt(bytes, offset);
+        offset += 4;
+
+        List<Signature25519> inputRegularBoxProofs = regularBoxProofsSerializer.parseBytes(Arrays.copyOfRange(bytes, offset, offset + batchSize));
+        offset += batchSize;
+
+        batchSize = BytesUtils.getInt(bytes, offset);
+        offset += 4;
+
+        List<RegularBoxData> outputRegularBoxesData = regularBoxDataListSerializer.parseBytes(Arrays.copyOfRange(bytes, offset, offset + batchSize));
+        offset += batchSize;
+
+        batchSize = BytesUtils.getInt(bytes, offset);
+        offset += 4;
+
+        SendCoinInfo sendCoinInfo = SendCoinInfo.parseBytes(Arrays.copyOfRange(bytes, offset, offset + batchSize));
+
+        return new ReceiveCoinTransaction(inputRegularBoxIds, inputRegularBoxProofs, outputRegularBoxesData, sendCoinInfo, fee, timestamp);
     }
 }

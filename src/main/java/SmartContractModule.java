@@ -69,6 +69,7 @@ public class SmartContractModule extends AbstractModule {
         customTransactionSerializers.put(SendCoinTransactionIdsEnum.ReceiveCoinTransactionId.id(), (TransactionSerializer) ReceiveCoinTransactionSerializer.getSerializer());
         SidechainBoxesDataCompanion sidechainBoxesDataCompanion = new SidechainBoxesDataCompanion(customBoxDataSerializers);
         SidechainProofsCompanion sidechainProofsCompanion = new SidechainProofsCompanion(customProofSerializers);
+
         SidechainTransactionsCompanion transactionsCompanion = new SidechainTransactionsCompanion(customTransactionSerializers,
                 sidechainBoxesDataCompanion, sidechainProofsCompanion);
 
